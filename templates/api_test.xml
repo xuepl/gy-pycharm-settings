@@ -130,4 +130,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="demo_init_api" value="from tools import init_tool&#10;&#10;init_tool.init()&#10;" description="初始化api接口测试项目" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
