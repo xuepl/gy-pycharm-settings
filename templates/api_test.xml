@@ -130,7 +130,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="demo_init_api" value="from tools import init_tool&#10;&#10;init_tool.init()&#10;" description="初始化api接口测试项目" toReformat="false" toShortenFQNames="true">
+  <template name="demo_init_api_project" value="from tools import init_tool&#10;&#10;init_tool.init_api_project()&#10;" description="初始化api接口测试项目" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_init_api_env" value="import subprocess&#10;##############################&#10;# 初始化环境：第三方依赖包+果芽工具包&#10;##############################&#10;cmd = 'pip install --upgrade guoya-api-test'&#10;subprocess.call(cmd,shell=True)" description="初始化api接口测试环境" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
