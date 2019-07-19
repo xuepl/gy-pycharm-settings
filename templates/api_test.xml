@@ -1,5 +1,5 @@
 <templateSet group="api_test">
-  <template name="demo_import_api" value="from tools import request_tool&#10;from tools import assert_tool&#10;from tools import random_tool&#10;from tools import mysql_tool&#10;from tools import excel_tool&#10;from tools import log_tool&#10;from tools import os_tool&#10;from tools import shell_tool&#10;import pytest&#10;import allure&#10;# 项目根目录建config包，里面建conf.py文件，用于配置&#10;from config import conf&#10;&#10;$body$" description="导入api测试的依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="demo_import_api" value="from tools import request_tool&#10;from tools import assert_tool&#10;from tools import random_tool&#10;from tools import mysql_tool&#10;from tools import excel_tool&#10;from tools import log_tool&#10;from tools import os_tool&#10;from tools import shell_tool&#10;import pytest&#10;import allure&#10;import json&#10;from config import conf&#10;&#10;$body$" description="导入api测试的依赖包" toReformat="false" toShortenFQNames="true">
     <variable name="body" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
