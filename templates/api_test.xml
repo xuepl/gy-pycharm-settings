@@ -135,7 +135,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="demo_init_api_env" value="import subprocess&#10;##############################&#10;# 初始化环境：第三方依赖包+果芽工具包&#10;##############################&#10;cmd = 'pip install --upgrade guoya-api-test'&#10;subprocess.call(cmd,shell=True)" description="初始化api接口测试环境" toReformat="true" toShortenFQNames="true">
+  <template name="demo_init_api_env" value="import os&#10;import subprocess&#10;&#10;root_path = os.path.dirname(__file__).replace('\\', '/')&#10;&#10;cmd = 'cd %s'%(root_path)&#10;print(root_path)&#10;subprocess.call(cmd, shell=True)&#10;print(root_path)&#10;&#10;cmd = 'pip3 install --upgrade guoya-api-test'&#10;subprocess.call(cmd, shell=True)&#10;" description="初始化api接口测试环境" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
