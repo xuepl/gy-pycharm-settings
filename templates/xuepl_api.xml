@@ -1,11 +1,12 @@
 <templateSet group="xuepl_api">
-  <template name="demo_http_get_query_no_token" value="def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    url = conf.GY_API_URL + '$uri$'&#10;    #请求数据，字典格式&#10;    query = $dict_query$&#10;    resp = request_tool.get_request(url,params=query)&#10;    body = resp.json()&#10;    # 断言响应码&#10;    with allure.step(&quot;断言响应状态码：实际结果：{}，预期结果：{}&quot;.format(resp.status_code,200)):pass&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #实际结果&#10;    actual = &quot;$actual$&quot;&#10;    #预期结果&#10;    expect = '$expect$'&#10;    with allure.step(&quot;断言$assert$：实际结果：{}，预期结果：{}&quot;.format(actual,expect)):pass&#10;    assert_tool.assert_equal(actual, expect)" description="http的get请求，query参数,no token" toReformat="false" toShortenFQNames="true">
+  <template name="demo_http_get_query" value="@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    #接口地址&#10;    uri = '$uri$'&#10;    #请求数据，字典格式&#10;    req = $request_data$&#10;    header = {}&#10;    resp = request_tool.get_request(uri,headers=header,params=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #预期结果  字符串或者数字&#10;    expect = $expect$&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="get请求，query参数" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
     <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
     <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
-    <variable name="dict_query" expression="" defaultValue="&quot;dict_query&quot;" alwaysStopAt="true" />
+    <variable name="request_data" expression="" defaultValue="&quot;request_data&quot;" alwaysStopAt="true" />
     <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
     <variable name="expect" expression="" defaultValue="&quot;expect&quot;" alwaysStopAt="true" />
-    <variable name="assert" expression="" defaultValue="&quot;assert&quot;" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
     </context>
@@ -35,6 +36,93 @@
     <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
     <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
     <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_post_query" value="@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    #接口地址&#10;    uri = '$uri$'&#10;    #请求数据，字典格式&#10;    req = $request_data$&#10;    header = {}&#10;    resp = request_tool.post_request(uri,headers=header,data=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #预期结果  字符串或者数字&#10;    expect = $expect$&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="post请求，键值对数据" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
+    <variable name="request_data" expression="" defaultValue="&quot;request_data&quot;" alwaysStopAt="true" />
+    <variable name="expect" expression="" defaultValue="&quot;expect&quot;" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_post_json" value="@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    #接口地址&#10;    uri = '$uri$'&#10;    #请求数据，字典格式&#10;    req = $request_data$&#10;    header = {}&#10;    resp = request_tool.post_request(uri,headers=header,json=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #预期结果  字符串或者数字&#10;    expect = $expect$&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="post请求，json数据" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
+    <variable name="request_data" expression="" defaultValue="&quot;request_data&quot;" alwaysStopAt="true" />
+    <variable name="expect" expression="" defaultValue="&quot;expect&quot;" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_post_query_path" value="@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    #接口地址  value替换uri中的{}&#10;    uri = '$uri$'.format($value$)&#10;    #请求数据，字典格式&#10;    req = $request_data$&#10;    header = {}&#10;    resp = request_tool.post_request(uri,headers=header,data=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #预期结果  字符串或者数字&#10;    expect = $expect$&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="post请求，query+path数据" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="request_data" expression="" defaultValue="&quot;request_data&quot;" alwaysStopAt="true" />
+    <variable name="expect" expression="" defaultValue="&quot;expect&quot;" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_post_json_path" value="@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    #接口地址  value替换uri中的{}&#10;    uri = '$uri$'.format($value$)&#10;    #请求数据，字典格式&#10;    req = $request_data$&#10;    header = {}&#10;    resp = request_tool.post_request(uri,headers=header,json=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #预期结果  字符串或者数字&#10;    expect = $expect$&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="post请求，json+path数据" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="request_data" expression="" defaultValue="&quot;request_data&quot;" alwaysStopAt="true" />
+    <variable name="expect" expression="" defaultValue="&quot;expect&quot;" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_post_path" value="@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    #接口地址  value替换uri中的{}&#10;    uri = '$uri$'.format($value$)&#10;    header = {}&#10;    resp = request_tool.post_request(uri,headers=header)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #预期结果  字符串或者数字&#10;    expect = $expect$&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="post请求，path数据" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="expect" expression="" defaultValue="&quot;expect&quot;" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_get_path" value="@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    #接口地址  value替换uri中的{}&#10;    uri = '$uri$'.format($value$)&#10;    header = {}&#10;    resp = request_tool.get_request(uri,headers=header)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #预期结果  字符串或者数字&#10;    expect = $expect$&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="get请求，path数据" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="expect" expression="" defaultValue="&quot;expect&quot;" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_get_query_path" value="@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$():&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    #接口地址  value替换uri中的{}&#10;    uri = '$uri$'.format($value$)&#10;    #请求数据，字典格式&#10;    req = $request_data$&#10;    header = {}&#10;    resp = request_tool.post_request(uri,headers=header,params=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #预期结果  字符串或者数字&#10;    expect = $expect$&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="get请求，query+path数据" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="uri" expression="" defaultValue="&quot;uri&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="request_data" expression="" defaultValue="&quot;request_data&quot;" alwaysStopAt="true" />
+    <variable name="expect" expression="" defaultValue="&quot;expect&quot;" alwaysStopAt="true" />
     <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
