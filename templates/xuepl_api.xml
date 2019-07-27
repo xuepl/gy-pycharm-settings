@@ -10,4 +10,34 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="demo_http_post_json_params" value="###########excel模板填写说明################&#10;# test_case&#9;用例名称&#10;# uri&#9;    接口地址&#10;# datas&#9;    请求数据，不管什么请求统一用json格式&#10;# headers&#9;请求头中需要添加的内容，json格式，不用添加直接给{}&#10;# expect    预期结果&#10;#############################################&#10;#文件路径样例：data/demo/excel_demo.xlsx&#10;data = excel_tool.get_test_case('$excel_file_path$')&#10;@pytest.mark.parametrize('uri,datas,headers,expect',data[1],ids=data[0])&#10;@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$(uri,datas,headers,expect):&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    req = json.loads(datas)&#10;    if (headers != ''):&#10;        header = json.loads(headers)&#10;    else:&#10;        header = {}&#10;    resp = request_tool.post_request(uri,headers=header,json=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)&#10;" description="post请求，json数据，参数化，数据文件分离" toReformat="false" toShortenFQNames="true">
+    <variable name="excel_file_path" expression="" defaultValue="&quot;excel_file_path&quot;" alwaysStopAt="true" />
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_post_query_params" value="###########excel模板填写说明################&#10;# test_case&#9;用例名称&#10;# uri&#9;    接口地址&#10;# datas&#9;    请求数据，不管什么请求统一用json格式&#10;# headers&#9;请求头中需要添加的内容，json格式，不用添加直接给{}&#10;# expect    预期结果&#10;#############################################&#10;#文件路径样例：data/demo/excel_demo.xlsx&#10;data = excel_tool.get_test_case('$excel_file_path$')&#10;@pytest.mark.parametrize('uri,datas,headers,expect',data[1],ids=data[0])&#10;@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$(uri,datas,headers,expect):&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    req = json.loads(datas)&#10;    if (headers != ''):&#10;        header = json.loads(headers)&#10;    else:&#10;        header = {}&#10;    resp = request_tool.post_request(uri,headers=header,data=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)&#10;" description="post请求，键值对数据，参数化，数据文件分离" toReformat="false" toShortenFQNames="true">
+    <variable name="excel_file_path" expression="" defaultValue="&quot;excel_file_path&quot;" alwaysStopAt="true" />
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="demo_http_get_query_params" value="###########excel模板填写说明################&#10;# test_case&#9;用例名称&#10;# uri&#9;    接口地址&#10;# datas&#9;    请求数据，不管什么请求统一用json格式&#10;# headers&#9;请求头中需要添加的内容，json格式，不用添加直接给{}&#10;# expect    预期结果&#10;#############################################&#10;#文件路径样例：data/demo/excel_demo.xlsx&#10;data = excel_tool.get_test_case('$excel_file_path$')&#10;@pytest.mark.parametrize('uri,datas,headers,expect',data[1],ids=data[0])&#10;@allure.feature('$module_name$')&#10;@allure.story(&quot;$api_name$&quot;)&#10;def $function_name$(uri,datas,headers,expect):&#10;    # config/conf.py里面配置GY_API_URL,模板快捷键demo_conf_api&#10;    req = json.loads(datas)&#10;    if (headers != ''):&#10;        header = json.loads(headers)&#10;    else:&#10;        header = {}&#10;    resp = request_tool.get_request(uri,headers=header,params=req)&#10;    body = resp.json()&#10;    with allure.step(&quot;断言响应状态码，实际结果：{} ,预期结果为：200&quot;.format(resp.status_code)):pass&#10;    # 判断响应码&#10;    assert_tool.assert_equal(resp.status_code, 200)&#10;    # 自定义断言&#10;    #实际结果，从字典body中取值例：body['code']&#10;    actual = $actual$&#10;    with allure.step(&quot;断言code，实际结果：{} ,预期结果为：{}&quot;.format(actual,expect)): pass&#10;    assert_tool.assert_equal(actual, expect)" description="get请求，query参数，参数化，数据文件分离" toReformat="false" toShortenFQNames="true">
+    <variable name="excel_file_path" expression="" defaultValue="&quot;excel_file_path&quot;" alwaysStopAt="true" />
+    <variable name="module_name" expression="" defaultValue="&quot;module_name&quot;" alwaysStopAt="true" />
+    <variable name="api_name" expression="" defaultValue="&quot;api_name&quot;" alwaysStopAt="true" />
+    <variable name="function_name" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
