@@ -30,6 +30,14 @@
           <option name="url" value="https://github.com/LudvikWoo/guoya-ui-test.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/LudvikWoo/guoya-api-test.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/LudvikWoo/guoya-tools.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="d:\programe_data\PycharmProjects" />
