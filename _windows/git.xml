@@ -1,5 +1,5 @@
 <application>
   <component name="Git.Application.Settings">
-    <option name="myPathToGit" value="C:\software\Git\bin\git.exe" />
+    <option name="myPathToGit" value="D:\Program Files\Git\bin\git.exe" />
   </component>
 </application>
