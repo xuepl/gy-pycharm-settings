@@ -130,12 +130,12 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="demo_init_env" value="# 在terminal控制台输入命令：&#10;# pip install --upgrade guoya-api-test" description="初始化API环境" toReformat="false" toShortenFQNames="true">
+  <template name="demo_init_env" value="# 在terminal控制台输入命令：&#10;# pip install --upgrade gy-api-tools" description="初始化API环境" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="demo_init_project" value="from tools import init_tool&#10;&#10;init_tool.init_api_project()" description="初始化API工程" toReformat="false" toShortenFQNames="true">
+  <template name="demo_init_project" value="from tools import init_project&#10;&#10;init_project.init_project()" description="初始化API工程" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
