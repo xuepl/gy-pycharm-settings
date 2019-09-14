@@ -140,4 +140,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="demo_data_temp" value="'''&#10;自动生成 数字 20,80   #生成20到80之间的数字 例：56&#10;自动生成 字符串 2,5 中文数字字母特殊字符 xuepl        #生成以xuepl开头加上长度2到5位包含中文数字字母特殊字符的字符串，例子：xuepl我1&#10;自动生成 地址&#10;自动生成 姓名&#10;自动生成 手机号&#10;自动生成 邮箱&#10;自动生成 身份证号&#10;'''" description="自动生成数据样例" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
