@@ -1,0 +1,7 @@
+<templateSet group="guoya_init">
+  <template name="guoya_init_ui" value="import init_tool&#10;&#10;init_tool.init_ui_project()" description="搭建界面自动化框架" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
