@@ -19,4 +19,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="guoya_pip" value="# 安装软件：pip install 包名&#10;# 更新软件：pip install --upgrade 包名" description="pip常用命令" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
