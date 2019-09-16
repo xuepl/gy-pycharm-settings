@@ -1,5 +1,20 @@
 <templateSet group="guoya_init">
-  <template name="guoya_init_ui" value="import init_tool&#10;&#10;init_tool.init_ui_project()" description="搭建界面自动化框架" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_init_tools" value="import init_tool&#10;&#10;init_tool.init_tools_prj()" description="搭建python基础框架" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="guoya_init_api" value="import init_tool&#10;&#10;init_tool.init_api_prj()" description="搭建接口自动化框架" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="guoya_init_ui" value="import init_tool&#10;&#10;init_tool.init_ui_prj()&#10;" description="搭建界面自动化框架" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="guoya_init_app" value="import init_tool&#10;&#10;init_tool.init_app_prj()" description="搭建手机自动化框架" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
