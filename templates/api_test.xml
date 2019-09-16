@@ -19,4 +19,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="demo_test_tamp" value="def test_run(data):&#10;    data[&quot;username&quot;]=&quot;自动生成 字符串 10,11 字母数字 xuepl&quot;&#10;    feature = &quot;user&quot;  # 功能&#10;    story = 'login'  # 故事&#10;    title = None  # 标题&#10;    method = POST&#10;    url = &quot;/admin/login&quot;  # 接口地址&#10;    headers = None  # 请求头&#10;    params = None  # get请求数据&#10;    data1 = None  # post请求键值对数据&#10;    # post请求json数据，注意数据格式为字典或者为json串 为空写None&#10;    json_data = '''&#10;    {&#10;      &quot;password&quot;: &quot;自动生成 字符串 10,12 字母数字 xuepl&quot;,&#10;      &quot;username&quot;: &quot;${username}&quot;&#10;    }&#10;    '''&#10;    files = None  # post请求，上传文件&#10;    status_code = 200  # 响应状态码&#10;    expect = &quot;200&quot;  # 预期结果&#10;    # json path，参数类型为列表 根据jsonpath提取响应正文中的数据&#10;    json_path = [{&quot;token&quot;: '$.data.token'}]&#10;    # --------------------分界线，下边的不要修改-----------------------------------------&#10;    json_data1 = None&#10;    if (isinstance(json_data, str)):&#10;        json_data1 = json.loads(json_data)&#10;&#10;    d = {&#10;        &quot;method&quot;: method,&#10;        &quot;url&quot;: url,&#10;        &quot;data&quot;: data1,&#10;        &quot;params&quot;: params,&#10;        &quot;json&quot;: json_data1,&#10;        &quot;status_code&quot;: status_code,&#10;        &quot;expect&quot;: expect,&#10;        &quot;headers&quot;: headers,&#10;        &quot;json_path&quot;: json_path,&#10;        &quot;feature&quot;: feature,&#10;        &quot;story&quot;: story,&#10;        &quot;title&quot;: title,&#10;        &quot;files&quot;: files&#10;    }&#10;    request_tamp(d,data)" description="测试用例模板" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
