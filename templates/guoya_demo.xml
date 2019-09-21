@@ -1,0 +1,22 @@
+<templateSet group="guoya_demo">
+  <template name="guoya_demo_tools" value="# 模块开发中，请稍作等待....." description="python基础示例代码" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="guoya_demo_api" value="# 模块开发中，请稍作等待....." description="api自动化示例代码" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="guoya_demo_ui" value="# 模块开发中，请稍作等待....." description="ui自动化示例代码" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="guoya_demo_app" value="# 模块开发中，请稍作等待....." description="app自动化示例代码" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

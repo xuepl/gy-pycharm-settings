@@ -1,4 +1,4 @@
-<templateSet group="guoya_install">
+<templateSet group="guoya_pip">
   <template name="guoya_pip_tools" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-tools" description="安装常用工具依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
