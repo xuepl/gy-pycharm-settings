@@ -24,7 +24,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_pip_tools_update" value="# 安装软件：pip install 包名&#10;# 更新软件：pip install --upgrade guoya-tools" description="更新guoya-tools" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_update" value="# 安装软件：pip install 包名&#10;# 更新软件：pip install --upgrade guoya-tools" description="更新guoya-tools" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
