@@ -1,20 +1,20 @@
 <templateSet group="guoya_install">
-  <template name="guoya_install_tools" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-tools" description="安装常用工具依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_tools" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-tools" description="安装常用工具依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_install_api" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-api" description="安装接口自动化依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_api" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-api" description="安装接口自动化依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_install_ui" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-ui" description="安装界面自动化依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_ui" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-ui" description="安装界面自动化依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_install_app" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-app" description="安装手机自动化依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_app" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-app" description="安装手机自动化依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
