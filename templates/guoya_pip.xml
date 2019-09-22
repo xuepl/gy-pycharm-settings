@@ -1,30 +1,25 @@
 <templateSet group="guoya_pip">
-  <template name="guoya_pip_tools" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-tools" description="安装常用工具依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_tools" value="# -*- coding: utf-8 -*-&#10;# @Project: guoya-app-test&#10;# @Author: 小吴老师&#10;# @Email: wuling@guoyasoft.com&#10;# @Weichat: 875955899&#10;# @Create time: 2019/9/22 8:28&#10;&#10;# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-tools" description="安装常用工具依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_pip_api" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-api" description="安装接口自动化依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_api" value="# -*- coding: utf-8 -*-&#10;# @Project: guoya-app-test&#10;# @Author: 小吴老师&#10;# @Email: wuling@guoyasoft.com&#10;# @Weichat: 875955899&#10;# @Create time: 2019/9/22 8:28&#10;&#10;# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-api" description="安装接口自动化依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_pip_ui" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-ui" description="安装界面自动化依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_ui" value="# -*- coding: utf-8 -*-&#10;# @Project: guoya-app-test&#10;# @Author: 小吴老师&#10;# @Email: wuling@guoyasoft.com&#10;# @Weichat: 875955899&#10;# @Create time: 2019/9/22 8:28&#10;&#10;# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-ui" description="安装界面自动化依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_pip_app" value="# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-app" description="安装手机自动化依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip_app" value="# -*- coding: utf-8 -*-&#10;# @Project: guoya-app-test&#10;# @Author: 小吴老师&#10;# @Email: wuling@guoyasoft.com&#10;# @Weichat: 875955899&#10;# @Create time: 2019/9/22 8:28&#10;&#10;# 请在terminal窗口输入下方命令：&#10;# pip3 install guoya-app" description="安装手机自动化依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_pip" value="# 安装软件：pip install 包名&#10;# 更新软件：pip install --upgrade 包名" description="pip常用命令" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-  <template name="guoya_pip_update" value="# 安装软件：pip install 包名&#10;# 更新软件：pip install --upgrade guoya-tools" description="更新guoya-tools" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_pip" value="# -*- coding: utf-8 -*-&#10;# @Project: guoya-app-test&#10;# @Author: 小吴老师&#10;# @Email: wuling@guoyasoft.com&#10;# @Weichat: 875955899&#10;# @Create time: 2019/9/22 8:28&#10;&#10;# 安装软件：pip install 包名&#10;# 更新软件：pip install --upgrade 包名" description="pip常用命令" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
