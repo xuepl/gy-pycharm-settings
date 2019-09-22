@@ -1,0 +1,7 @@
+<templateSet group="test">
+  <template name="aaa" value="黄河远上白云间" description="这是一个测试模板" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
