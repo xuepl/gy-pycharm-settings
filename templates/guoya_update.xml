@@ -4,7 +4,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="guoya_update_api" value="# -*- coding: utf-8 -*-&#10;# @Project: guoya-app-test&#10;# @Author: 小吴老师&#10;# @Email: wuling@guoyasoft.com&#10;# @Weichat: 875955899&#10;# @Create time: 2019/9/22 8:28&#10;&#10;# 安装软件：pip install 包名&#10;# 更新软件：pip install --upgrade guoya-api" description="更新guoya-api依赖包" toReformat="false" toShortenFQNames="true">
+  <template name="guoya_update_api" value="# -*- coding: utf-8 -*-&#10;# @Project: guoya-app-test&#10;# @Author: 小吴老师&#10;# @Email: wuling@guoyasoft.com&#10;# @Weichat: 875955899&#10;# @Create time: 2019/9/22 8:28&#10;&#10;# 安装软件：pip install 包名&#10;# 更新软件：pip install --upgrade gy-api-tools" description="更新guoya-api依赖包" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
