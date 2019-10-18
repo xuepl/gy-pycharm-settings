@@ -1,0 +1,7 @@
+<templateSet group="guoya_data">
+  <template name="guoya_data_json_path" value="# json path，参数类型为列表 根据jsonpath提取响应正文中的数据&#10;json_path = [{&quot;token&quot;: '$.data.token'}]" description="json_path实例" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
