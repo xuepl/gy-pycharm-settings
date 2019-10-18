@@ -4,4 +4,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="guoya_data_keys" value="pub_data[&quot;username&quot;] = &quot;dengxin12&quot; # 类似jmeter中的用户自定义变量&#10;method = &quot;POST&quot;  #请求方法，全部大写&#10;testcase = ['http://www.baidu.com',&quot;全字段正常流&quot;] # allure报告中关联用例&#10;description = &quot;操作描述&quot;  # allure报告中添加操作描述&#10;issue = [&quot;http://www.baidu.com&quot;,&quot;bug标题&quot;] # allure报告中关联bug单&#10;feature = &quot;user&quot;  # allure报告中一级分类&#10;story = 'login'  # allure报告中二级分类&#10;title = &quot;登录&quot;  # allure报告中用例名字&#10;uri = &quot;/login&quot;  # 接口地址&#10;# 请求头&#10;headers = {&quot;token&quot;:&quot;eyJ0aW1lT3V0IjoxNTcxMzYxMDY3OTc5LCJ1c2VySWQiOjEsInVzZXJOYW1lIjoiZGVuZ3hpbjEyIn0=&quot;}&#10;params = {&quot;userName&quot;:&quot;sssss&quot;,&quot;page&quot;:1,&quot;size&quot;:10}  # get请求数据&#10;data = {&quot;userName&quot;:&quot;sssss&quot;,&quot;page&quot;:1,&quot;size&quot;:10}  # post请求键值对数据&#10;# post请求json数据，注意数据格式为字典或者为json串 为空写None&#10;json_data = '''&#10;{&#10;&quot;pwd&quot;: &quot;dengxin52&quot;,&#10;&quot;userName&quot;: &quot;${username}&quot;&#10;}&#10;'''&#10;files = {'file': open(&quot;e:\sku.xlsx&quot;,'rb')}  # post请求，上传文件&#10;status_code = 200  # 响应状态码&#10;expect = &quot;2000&quot;  # 预期结果&#10;# json path，参数类型为列表 根据jsonpath提取响应正文中的数据&#10;json_path = [{&quot;token&quot;: '$.data.token'}]" description="关键字实例" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>

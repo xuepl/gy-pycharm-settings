@@ -1,0 +1,12 @@
+<templateSet group="api_demo">
+  <template name="guoya_demo_post_json" value="def test_json_data(pub_data):&#10;    method = &quot;POST&quot;  #请求方法，全部大写&#10;    feature = &quot;用户模块&quot;  # allure报告中一级分类&#10;    story = '用户登录'  # allure报告中二级分类&#10;    title = &quot;全字段正常流_1&quot;  # allure报告中用例名字&#10;    uri = &quot;/login&quot;  # 接口地址&#10;    # post请求json数据，注意数据格式为字典或者为json串 为空写None&#10;    json_data = '''&#10;    {&#10;  &quot;pwd&quot;: &quot;xuepl123&quot;,&#10;  &quot;userName&quot;: &quot;xuepl123&quot;&#10;}&#10;    '''&#10;    status_code = 200  # 响应状态码&#10;    expect = &quot;2000&quot;  # 预期结果&#10;    # --------------------分界线，下边的不要修改-----------------------------------------&#10;    # method,pub_data和url为必传字段&#10;    request_tool.request(method=method,url=uri,pub_data=pub_data,json_data=json_data,status_code=status_code,expect=expect,feature=feature,story=story,title=title)&#10;" description="post请求json数据" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="guoya_demo_post_data" value="def test_json_data(pub_data):&#10;    method = &quot;POST&quot;  #请求方法，全部大写&#10;    feature = &quot;用户模块&quot;  # allure报告中一级分类&#10;    story = '锁定用户'  # allure报告中二级分类&#10;    title = &quot;锁定用户_全字段正常流_1&quot;  # allure报告中用例名字&#10;    uri = &quot;/user/lock&quot;  # 接口地址&#10;    # post请求json数据，注意数据格式为字典或者为json串 为空写None&#10;    data = {&quot;userName&quot;:'xuepl122'}&#10;    status_code = 200  # 响应状态码&#10;    expect = &quot;2000&quot;  # 预期结果&#10;    # --------------------分界线，下边的不要修改-----------------------------------------&#10;    # method,pub_data和url为必传字段&#10;    request_tool.request(method=method,url=uri,pub_data=pub_data,data=data,status_code=status_code,expect=expect,feature=feature,story=story,title=title)&#10;" description="post请求键值对数据" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
