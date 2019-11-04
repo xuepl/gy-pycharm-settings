@@ -5,9 +5,7 @@
       <mapping pattern=".pypirc" type="PLAIN_TEXT" />
       <mapping pattern="README" type="PLAIN_TEXT" />
       <mapping ext="text" type="PLAIN_TEXT" />
-      <removed_mapping ext="txt" approved="true" type="PLAIN_TEXT" />
       <mapping ext="txt" type="Robot Feature" />
-      <removed_mapping ext="txt" approved="true" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
