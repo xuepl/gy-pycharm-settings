@@ -42,6 +42,10 @@
           <option name="url" value="http://github.com" />
           <option name="userName" value="xuepl" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/xuepl/guoya-auto-api-1910A.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="d:\programe_data\PycharmProjects" />
