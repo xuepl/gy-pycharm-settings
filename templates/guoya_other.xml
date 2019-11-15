@@ -1,7 +1,0 @@
-<templateSet group="guoya_other">
-  <template name="wl_other_comment" value="# -*- coding: utf-8 -*-&#10;# @Project: guoya-tools-demo&#10;# @Author: 小吴老师&#10;# @Email: wuling@guoyasoft.com&#10;# @Weichat: 875955899&#10;# @Create time: 2019/9/24 13:34" description="" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-</templateSet>
