@@ -54,6 +54,10 @@
           <option name="url" value="https://github.com/testdevhome/Autotestplat.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/pjialin/py12306.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="E:\softwaredata\python" />
