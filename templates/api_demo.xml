@@ -24,4 +24,9 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="guoya_demo_excel" value="import pytest&#10;from tools.data import excel_tool&#10;&#10;data = excel_tool.get_test_case(&quot;test_case/users/充值接口测试数据.xls&quot;)&#10;@pytest.mark.parametrize(&quot;account_name,money,expect&quot;,data[1],ids=data[0])&#10;def test_recharge(pub_data,account_name,money,expect):&#10;    pub_data[&quot;account_name&quot;] = account_name&#10;    pub_data[&quot;money&quot;] = money&#10;    method = &quot;POST&quot;  #请求方法，全部大写&#10;    feature = &quot;用户模块&quot;  # allure报告中一级分类&#10;    story = '用户充值'  # allure报告中二级分类&#10;    uri = &quot;/acc/recharge&quot;  # 接口地址&#10;    headers = {'Host': '192.168.1.151:8084', 'Connection': 'keep-alive', 'accept': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36', 'Content-Type': 'application/json', 'Origin': 'http://192.168.1.151:8084', 'Referer': 'http://192.168.1.151:8084/swagger-ui.html?urls.primaryName=user%20apis', 'Accept-Encoding': 'gzip, deflate', 'Accept-Language': 'zh-CN,zh;q=0.9', 'Cookie': 'csrftoken=K1b93CfwXCyVVJCKvGBr2z9gpODYDvE18eFgydclMwsw1wf6XtHjH9TveCqNjXC6'}&#10;    status_code = 200  # 响应状态码&#10;    expect = expect  # 预期结果&#10;    json_data='''{&#10;  &quot;accountName&quot;: &quot;${account_name}&quot;,&#10;  &quot;changeMoney&quot;: &quot;${money}&quot;&#10;}'''&#10;&#10;    # --------------------分界线，下边的不要修改-----------------------------------------&#10;    # method,pub_data和url为必传字段&#10;    r = request_tool.request(method=method,url=uri,pub_data=pub_data,status_code=status_code,headers=headers,expect=expect,feature=feature,story=story,json_data=json_data)&#10;" description="excel数据驱动" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
