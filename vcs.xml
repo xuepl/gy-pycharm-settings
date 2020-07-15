@@ -70,8 +70,12 @@
           <option name="url" value="https://gitee.com/dhmgws/tools_zyf.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="git@github.com:xuepl/api_automation_test.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="E:\softwaredata\python" />
+    <option name="cloneParentDir" value="E:\workspace\ck" />
   </component>
 </application>
