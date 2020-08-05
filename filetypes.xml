@@ -5,10 +5,12 @@
       <mapping pattern="README" type="PLAIN_TEXT" />
       <mapping pattern=".pypirc" type="PLAIN_TEXT" />
       <mapping pattern="离线安装第三方包的方法" type="PLAIN_TEXT" />
+      <mapping pattern="readme" type="PLAIN_TEXT" />
       <mapping pattern="bbb" type="PLAIN_TEXT" />
       <mapping pattern="shop" type="PLAIN_TEXT" />
       <mapping pattern="aaa" type="PLAIN_TEXT" />
       <mapping ext="text" type="PLAIN_TEXT" />
+      <removed_mapping ext="txt" type="PLAIN_TEXT" />
       <mapping ext="txt" type="Robot Feature" />
     </extensionMap>
   </component>
