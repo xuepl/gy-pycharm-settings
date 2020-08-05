@@ -10,8 +10,6 @@
       <mapping pattern="shop" type="PLAIN_TEXT" />
       <mapping pattern="aaa" type="PLAIN_TEXT" />
       <mapping ext="text" type="PLAIN_TEXT" />
-      <removed_mapping ext="txt" type="PLAIN_TEXT" />
-      <mapping ext="txt" type="Robot Feature" />
     </extensionMap>
   </component>
 </application>
